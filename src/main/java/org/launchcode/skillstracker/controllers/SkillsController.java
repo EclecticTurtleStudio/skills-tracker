@@ -25,19 +25,19 @@ public class SkillsController {
                 "</html>";
     }
 
-    @RequestMapping(value = "coderResponse", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "hello", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String coderResponse(@RequestParam String coder, String lang1, String lang2, String lang3) {
+    public String hello(@RequestParam String coder) {
         return    "<html>" +
                         "<body>" +
                             "<h1>" + coder + "</h1>" +
-                            "<ol>" +
-                                "<li>" + lang1 + "</li>" +
-                                "<li>" + lang2 + "</li>" +
-                                "<li>" + lang3 + "</li>" +
-                            "</ol>" +
+//                            "<ol>" +
+//                                "<li>" + lang1 + "</li>" +
+//                                "<li>" + lang2 + "</li>" +
+//                                "<li>" + lang3 + "</li>" +
+//                            "</ol>" +
                         "</body>" +
-                        "</html>";
+                    "</html>";
     }
 
     // responds to requests at /form
@@ -48,8 +48,8 @@ public class SkillsController {
                     "<body>" +
                         "<h1>Skills Tracker</h1>" +
                         "<h2>What are YOUR favorite computer languages?</h2>" +
-                        "<form method = 'post' action = '/coderResponse'>" +
-                            "<label for = coder>Name: </label><br/>" +
+                        "<form method = 'post' action = '/hello'>" +
+                            "<label for = 'coder'>Name: </label><br/>" +
                             "<input type = 'text' name = 'coder' id = 'coder' /><br/>" +
                             "<label for = 'lang1'>Choose your favorite language: </label><br/>" +
                             "<select name = 'lang1' id = 'lang1'>" +
