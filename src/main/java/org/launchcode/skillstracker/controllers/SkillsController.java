@@ -25,17 +25,17 @@ public class SkillsController {
                 "</html>";
     }
 
-    @RequestMapping(value = "hello", method = {RequestMethod.GET, RequestMethod.POST})
+    @PostMapping(value = "hello")
     @ResponseBody
-    public String hello(@RequestParam String coder) {
+    public String hello(@RequestParam String coder, String lang1, String lang2, String lang3) {
         return    "<html>" +
                         "<body>" +
                             "<h1>" + coder + "</h1>" +
-//                            "<ol>" +
-//                                "<li>" + lang1 + "</li>" +
-//                                "<li>" + lang2 + "</li>" +
-//                                "<li>" + lang3 + "</li>" +
-//                            "</ol>" +
+                            "<ol>" +
+                                "<li>" + lang1 + "</li>" +
+                                "<li>" + lang2 + "</li>" +
+                                "<li>" + lang3 + "</li>" +
+                            "</ol>" +
                         "</body>" +
                     "</html>";
     }
@@ -75,7 +75,7 @@ public class SkillsController {
                                 "<option value='css'>CSS</option>" +
                                 "<option value='java'>Java</option>" +
                             "</select><br/>" +
-                            "<input type = 'submit' value = 'Submit Choices' /" +
+                            "<input type = 'submit' value = 'Submit Choices' />" +
                         "</form>" +
                     "</body>" +
                 "</html>";
